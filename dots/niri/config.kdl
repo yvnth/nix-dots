@@ -142,7 +142,8 @@ binds {
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
 
-    Print { spawn-sh "grim -t ppm -g \"$(slurp)\" - | satty --filename - --fullscreen --copy-command wl-copy --output-filename ~/Pictures/screenshots/$(date '+%Y%m%d-%H:%M:%S').png"; }
+    Print { spawn-sh "grim -t ppm -g \"$(slurp)\" - | satty --filename - --fullscreen --copy-command wl-copy --output-filename ~/Pictures/screenshots/$(date '+%Y-%m-%d_%H-%M-%S').png"; }
+    Shift+Print { spawn-sh "if pgrep -x wl-screenrec > /dev/null; then pkill -SIGINT wl-screenrec && notify-send -u normal -t 4000 '🎬 Recording Saved' '✅ Video written to ~/Videos — ready to use!'; else FILE=~/Videos/$(date '+%Y-%m-%d_%H-%M-%S').mp4; REGION=$(slurp) && wl-screenrec --geometry \"$REGION\" -f \"$FILE\" & notify-send -u critical -t 3000 '🔴 Recording in Progress' '🎯 Region locked — press Shift+Print again to stop'; fi"; }
 
     Mod+Q { close-window; }
     Mod+F { maximize-column; }

@@ -110,6 +110,7 @@
     wezterm
     wget
     wl-clipboard
+    wl-screenrec
     xwayland-satellite
     yazi
     zathura
