@@ -6,15 +6,16 @@ return {
 
 	font = wezterm.font_with_fallback({
 		{ family = "JetBrainsMono Nerd Font", weight = "Regular" },
+		{ family = "Noto Sans CJK JP", weight = "Regular" },
 	}),
 	font_size = 23.0,
 	line_height = 0.80,
-
 	harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 
 	enable_tab_bar = false,
 	window_close_confirmation = "NeverPrompt",
 	adjust_window_size_when_changing_font_size = false,
+
 	window_background_opacity = 0.95,
 	window_padding = {
 		left = 10,
