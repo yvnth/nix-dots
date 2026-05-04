@@ -6,6 +6,8 @@ in {
     ".bashrc".source = mkOutOfStoreSymlink "${configDir}/shell/.bashrc";
     ".config/btop".source = mkOutOfStoreSymlink "${configDir}/btop";
     ".config/cava".source = mkOutOfStoreSymlink "${configDir}/cava";
+    ".config/dunst".source = mkOutOfStoreSymlink "${configDir}/dunst";
+    ".config/foot".source = mkOutOfStoreSymlink "${configDir}/foot";
     ".config/fuzzel".source = mkOutOfStoreSymlink "${configDir}/fuzzel";
     ".config/lazydocker".source = mkOutOfStoreSymlink "${configDir}/lazydocker";
     ".config/lazygit".source = mkOutOfStoreSymlink "${configDir}/lazygit";
@@ -15,8 +17,10 @@ in {
     ".config/scripts".source = mkOutOfStoreSymlink "${configDir}/scripts";
     ".config/shell".source = mkOutOfStoreSymlink "${configDir}/shell";
     ".config/starship".source = mkOutOfStoreSymlink "${configDir}/starship";
+    ".config/sway".source = mkOutOfStoreSymlink "${configDir}/sway";
+    ".config/swaylock".source = mkOutOfStoreSymlink "${configDir}/swaylock";
     ".config/tmux".source = mkOutOfStoreSymlink "${configDir}/tmux";
-    ".config/wezterm".source = mkOutOfStoreSymlink "${configDir}/wezterm";
+    ".config/waybar".source = mkOutOfStoreSymlink "${configDir}/waybar";
     ".config/yazi".source = mkOutOfStoreSymlink "${configDir}/yazi";
     ".config/zathura".source = mkOutOfStoreSymlink "${configDir}/zathura";
     ".zshrc".source = mkOutOfStoreSymlink "${configDir}/shell/.zshrc";

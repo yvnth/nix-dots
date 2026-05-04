@@ -26,6 +26,7 @@
   };
 
   time.timeZone = "Asia/Kolkata";
+
   i18n.defaultLocale = "en_US.UTF-8";
 
   nix.settings.experimental-features = [
@@ -36,7 +37,11 @@
   nixpkgs.config.allowUnfree = true;
 
   programs = {
-    niri.enable = true;
+    sway = {
+      enable = true;
+      extraOptions = [ "--unsupported-gpu" ];
+    };
+    xwayland.enable = true;
     zsh.enable = true;
   };
 
@@ -62,7 +67,10 @@
     ];
   };
 
-  xdg.portal.enable = true;
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+  };
 
   zramSwap = {
     enable = true;

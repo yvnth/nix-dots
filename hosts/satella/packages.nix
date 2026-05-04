@@ -12,10 +12,13 @@
   };
 
   environment.systemPackages = with pkgs; [
+    acpi
+    autotiling
     age
     asciiquarium
     astroterm
     bat
+    bluetui
     brightnessctl
     btop
     calibre
@@ -28,18 +31,19 @@
     direnv
     docker-buildx
     docker-compose
+    dunst
     dysk
     eza
     fastfetch
     fd
     figlet
     firefox
+    foot
     fortune
     fuzzel
     fzf
     gcc
     gimp
-    glow
     gnumake
     go
     gradle
@@ -65,7 +69,6 @@
     man-db
     man-pages
     maven
-    mdcat
     microfetch
     mpv
     ncdu
@@ -73,7 +76,6 @@
     neovim
     nerdfetch
     nitch
-    noctalia-shell
     nodejs
     nsxiv
     nwg-look
@@ -99,7 +101,9 @@
     slurp
     sops
     starship
+    swaybg
     swayidle
+    swaylock
     tealdeer
     tmux
     tty-clock
@@ -108,15 +112,15 @@
     unzip
     uwufetch
     vscode
-    wezterm
+    waybar
     wget
     wl-clipboard
     wl-screenrec
     xwayland-satellite
     yazi
     zathura
-    zoxide
     zig
     zip
+    zoxide
   ];
 }
