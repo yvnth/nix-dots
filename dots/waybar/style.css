@@ -1,7 +1,7 @@
 @define-color mauve #cba6f7;
 @define-color text #cdd6f4;
 @define-color subtext #a6adc8;
-@define-color bg rgba(30, 30, 46, 0.55);
+@define-color bg #1e1e2e;
 @define-color active #cba6f7;
 @define-color crust #11111b;
 
@@ -11,55 +11,38 @@
   font-weight: 600;
   border: none;
   min-height: 0;
-  }
+}
 
 window#waybar {
-background: transparent;
-margin: 12px 28px 0 28px;
+  background: @bg;
+  color: @text;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-background: transparent;
-padding: 0;
-}
-
-/* NixOS logo module */
-#custom-nixos {
-background: @bg;
-color: @mauve;
-font-size: 20px;
-padding: 4px 16px;
-margin-right: 12px;
-margin-left: 6px;
-border-radius: 999px;
-}
-
-#workspaces {
-background: transparent;
+  background: @bg;
+  padding: 0;
+  margin: 0;
 }
 
 #workspaces button {
-background: @bg;
-color: @subtext;
-padding: 4px 16px;
-margin-right: 12px;
-border-radius: 999px;
-}
-
-#workspaces button.visible {
-background: rgba(49, 50, 68, 0.85);
-color: @text;
+  background: @bg;
+  color: @subtext;
+  padding: 4px 10px;
+  margin: 0;
+  border-radius: 0;
 }
 
 #workspaces button.active {
-background: @active;
-color: @crust;
+  color: @active;
 }
 
 #workspaces button:hover {
-background: rgba(49, 50, 68, 0.8);
+  background: #313244;
 }
 
 #network,
@@ -68,9 +51,10 @@ background: rgba(49, 50, 68, 0.8);
 #battery,
 #pulseaudio,
 #backlight,
-#clock {
-background: @bg;
-border-radius: 999px;
-padding: 4px 16px;
-margin-left: 12px;
+#clock,
+#tray {
+  background: @bg;
+  border-radius: 0;
+  padding: 4px 10px;
+  margin: 0;
 }
