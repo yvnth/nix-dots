@@ -26,49 +26,51 @@
     stylix.url = "github:danth/stylix";
   };
 
-  outputs = {
-    home-manager,
-    nix-flatpak,
-    nixpkgs,
-    self,
-    sops-nix,
-    spicetify-nix,
-    stylix,
-    ...
-  } @ inputs: {
-    nixosConfigurations.satella = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+  outputs =
+    {
+      home-manager,
+      nix-flatpak,
+      nixpkgs,
+      self,
+      sops-nix,
+      spicetify-nix,
+      stylix,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations.satella = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
 
-      specialArgs = {
-        inherit inputs;
+        specialArgs = {
+          inherit inputs;
+        };
+
+        modules = [
+          ./hosts/satella/configuration.nix
+          nix-flatpak.nixosModules.nix-flatpak
+          home-manager.nixosModules.home-manager
+          stylix.nixosModules.stylix
+          {
+            home-manager = {
+              backupFileExtension = "bak";
+
+              extraSpecialArgs = {
+                inherit inputs;
+              };
+
+              useGlobalPkgs = true;
+              useUserPackages = true;
+
+              users.yash2k4 = {
+                imports = [
+                  ./hosts/satella/home.nix
+                  inputs.sops-nix.homeManagerModules.sops
+                  spicetify-nix.homeManagerModules.default
+                ];
+              };
+            };
+          }
+        ];
       };
-
-      modules = [
-        ./hosts/satella/configuration.nix
-        nix-flatpak.nixosModules.nix-flatpak
-        home-manager.nixosModules.home-manager
-        stylix.nixosModules.stylix
-        {
-          home-manager = {
-            backupFileExtension = "bak";
-
-            extraSpecialArgs = {
-              inherit inputs;
-            };
-
-            useGlobalPkgs = true;
-            useUserPackages = true;
-
-            users.yash2k4 = {
-              imports = [
-                ./hosts/satella/home.nix
-                inputs.sops-nix.homeManagerModules.sops
-                spicetify-nix.homeManagerModules.default
-              ];
-            };
-          };
-        }
-      ];
     };
-  };
 }

@@ -1,7 +1,9 @@
-{config, ...}: let
+{ config, ... }:
+let
   mkOutOfStoreSymlink = path: config.lib.file.mkOutOfStoreSymlink path;
   configDir = "${config.home.homeDirectory}/nix-dots/dots";
-in {
+in
+{
   home.file = {
     ".bashrc".source = mkOutOfStoreSymlink "${configDir}/shell/.bashrc";
     ".config/btop".source = mkOutOfStoreSymlink "${configDir}/btop";
@@ -9,11 +11,9 @@ in {
     ".config/dunst".source = mkOutOfStoreSymlink "${configDir}/dunst";
     ".config/foot".source = mkOutOfStoreSymlink "${configDir}/foot";
     ".config/fuzzel".source = mkOutOfStoreSymlink "${configDir}/fuzzel";
+    ".config/helix".source = mkOutOfStoreSymlink "${configDir}/helix";
     ".config/lazydocker".source = mkOutOfStoreSymlink "${configDir}/lazydocker";
     ".config/lazygit".source = mkOutOfStoreSymlink "${configDir}/lazygit";
-    ".config/niri".source = mkOutOfStoreSymlink "${configDir}/niri";
-    ".config/noctalia".source = mkOutOfStoreSymlink "${configDir}/noctalia";
-    ".config/nvim".source = mkOutOfStoreSymlink "${configDir}/nvim";
     ".config/scripts".source = mkOutOfStoreSymlink "${configDir}/scripts";
     ".config/shell".source = mkOutOfStoreSymlink "${configDir}/shell";
     ".config/sway".source = mkOutOfStoreSymlink "${configDir}/sway";

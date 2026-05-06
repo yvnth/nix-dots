@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ../../home/dots.nix
     ../../home/programs/git.nix

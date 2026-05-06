@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   fonts.packages = with pkgs; [
     lohit-fonts.tamil
     noto-fonts-cjk-sans
@@ -13,25 +14,29 @@
 
   environment.systemPackages = with pkgs; [
     acpi
-    autotiling
     age
     asciiquarium
     astroterm
+    autotiling
     banana-cursor
+    bash-language-server
     bat
     bluetui
     brightnessctl
     btop
     calibre
-    cava
     cargo-seek
+    cava
     cbonsai
+    clang-tools
     cointop
     cmatrix
     cowsay
     direnv
     docker-buildx
     docker-compose
+    dockerfile-language-server
+    dotnet-sdk
     dunst
     dysk
     eza
@@ -47,9 +52,12 @@
     gimp
     gnumake
     go
+    gopls
     gradle
     grim
+    helix
     jdk21
+    jdt-language-server
     jetbrains.idea-oss
     jq
     jujutsu
@@ -67,17 +75,22 @@
     libqalculate
     libreoffice
     localsend
+    lua-language-server
     man-db
     man-pages
+    marksman
     maven
+    mesonlsp
     microfetch
     mpv
     ncdu
     nemo
-    neovim
     nerdfetch
+    nil
+    nixfmt
     nitch
     nodejs
+    noto-fonts
     nsxiv
     nwg-look
     obsidian
@@ -89,13 +102,15 @@
     pfetch-rs
     php
     pipes
+    postman
+    pyright
     python314
     python314Packages.pip
     python314Packages.uv
-    postman
     ripgrep
     rofimoji
     ruby
+    rust-analyzer
     rustup
     satty
     sl
@@ -104,23 +119,28 @@
     swaybg
     swayidle
     swaylock
+    taplo
     tealdeer
     tmux
     tty-clock
     typescript
+    typescript-language-server
     typst
     unzip
     uwufetch
     vscode
+    vscode-langservers-extracted
     waybar
     wget
     wl-clipboard
     wl-screenrec
     xwayland-satellite
+    yaml-language-server
     yazi
     zathura
     zig
     zip
+    zls
     zoxide
   ];
 }

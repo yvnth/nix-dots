@@ -1,8 +1,8 @@
 {
   config,
-  inputs,
   ...
-}: {
+}:
+{
   sops = {
     age.keyFile = "/home/yash2k4/.config/sops/age/keys.txt";
 
