@@ -2,7 +2,6 @@ theme = "catppuccin_mocha"
 
 [editor]
 color-modes = true
-clipboard-provider = "wayland"
 
 [editor.cursor-shape]
 normal = "block"
