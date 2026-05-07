@@ -11,19 +11,14 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
-
 zinit ice wait"0" lucid
 zinit light Aloxaf/fzf-tab
-
 zinit ice wait"0" lucid
 zinit light zsh-users/zsh-history-substring-search
-
 zinit ice wait"0" lucid
 zinit light zsh-users/zsh-syntax-highlighting
-
 zinit ice wait"0" lucid atload'eval "$(fzf --zsh)"'
 zinit light junegunn/fzf
-
 zinit ice wait"0" lucid atload'eval "$(zoxide init --cmd cd zsh)"'
 zinit light ajeetdsouza/zoxide
 
@@ -61,11 +56,11 @@ path=(
 )
 
 export GOPATH="$HOME/.local/share/go"
-export EDITOR=nvim
+export EDITOR=hx
 export VISUAL="$EDITOR"
 export SUDO_EDITOR="$EDITOR"
 export SYSTEMD_EDITOR="$EDITOR"
-export MANPAGER='nvim +Man!'
+export MANPAGER='hx'
 
 source ~/.config/shell/aliases
 
