@@ -8,7 +8,7 @@
 
     defaultSopsFile = ../../secrets/secrets.yaml;
 
-    secrets.ssh_key = {
+    secrets.yash2k4_satella_ssh_key = {
       path = "${config.home.homeDirectory}/.ssh/id_ed25519";
     };
   };
