@@ -18,7 +18,10 @@
     efi.canTouchEfiVariables = true;
   };
 
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = false;
+  };
 
   networking = {
     hostName = "satella";
