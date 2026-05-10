@@ -48,8 +48,9 @@
   services.displayManager.ly = {
     enable = true;
     settings = {
-      numlock = true;
       animation = "matrix";
+      bigclock = "en";
+      numlock = true;
     };
   };
 
