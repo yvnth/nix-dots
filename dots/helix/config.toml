@@ -1,8 +1,10 @@
 theme = "catppuccin_frappe"
 
 [editor]
+bufferline = "multiple"
 color-modes = true
 completion-trigger-len = 1
+cursorline = true
 default-yank-register = "+"
 idle-timeout = 0
 line-number = "relative"
