@@ -46,8 +46,7 @@ in
       removeRecentlyPlayed
       hidePodcastButton
       hideAudiobooksButton
-      roundedButtons
-      roundedThickerBars
+      thickerBars
       fixListenTogetherButton
       removeDuplicatedFullscreenButton
       removeTheArtistsAndCreditsSectionsFromTheSidebar
