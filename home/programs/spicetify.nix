@@ -24,7 +24,6 @@ in
       songStats
       wikify
       adblockify
-      fullAppDisplayMod
       fullAlbumDate
       volumePercentage
       simpleBeautifulLyrics
