@@ -18,38 +18,39 @@ in
     ];
 
     enabledExtensions = with spicePkgs.extensions; [
-      autoSkipVideo
-      loopyLoop
-      trashbin
-      songStats
-      wikify
       adblockify
+      autoSkipVideo
       fullAlbumDate
-      volumePercentage
+      loopyLoop
       simpleBeautifulLyrics
+      songStats
+      trashbin
+      volumePercentage
+      wikify
     ];
 
     enabledSnippets = with spicePkgs.snippets; [
-      fixDjIcon
-      fixLikedIcon
-      fixedEpisodesIcon
+      amogusDancing
       disableRecommendations
+      fixDjIcon
+      fixedEpisodesIcon
+      fixLikedButton
+      fixLikedIcon
+      fixListenTogetherButton
       fixPlaylistHover
       fixProgressBar
-      rightCoverArt
-      pointer
-      fixLikedButton
-      rotatingCoverart
-      removePopular
-      amogusDancing
-      removeRecentlyPlayed
-      hidePodcastButton
       hideAudiobooksButton
-      thickerBars
-      fixListenTogetherButton
-      removeDuplicatedFullscreenButton
-      removeTheArtistsAndCreditsSectionsFromTheSidebar
+      hidePodcastButton
       jumpingZerotwo
+      pointer
+      removeDuplicatedFullscreenButton
+      removePopular
+      removeRecentlyPlayed
+      removeTheArtistsAndCreditsSectionsFromTheSidebar
+      rightCoverArt
+      rotatingCoverart
+      roundedButtons
+      thickerBars
     ];
   };
 }
