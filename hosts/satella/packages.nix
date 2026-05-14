@@ -139,7 +139,6 @@
     wget
     wl-clipboard
     wl-screenrec
-    xwayland-satellite
     yaml-language-server
     yazi
     zathura
