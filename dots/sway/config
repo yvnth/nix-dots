@@ -53,11 +53,12 @@ exec_always sh -c 'pkill waybar; sleep 0.2; waybar'
 exec ~/.config/sway/battery-warning.sh
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
+
 exec_always swayidle -w \
-    timeout 300 'swaylock --ignore-empty-password --indicator-thickness 15 --indicator-radius 150 --image ~/Pictures/walls/bsod.png --ring-color f4b8e4 --key-hl-color a6d189 --line-color 00000000 --inside-color 30344688 --inside-clear-color 30344688 --text-color c6d0f5 --text-clear-color c6d0f5 --ring-clear-color f4b8e4 --separator-color 00000000 --font "JetBrainsMono Nerd Font"' \
+    timeout 300 '$lock' \
     timeout 600 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock --ignore-empty-password --indicator-thickness 15 --indicator-radius 150 --image ~/Pictures/walls/bsod.png --ring-color f4b8e4 --key-hl-color a6d189 --line-color 00000000 --inside-color 30344688 --inside-clear-color 30344688 --text-color c6d0f5 --text-clear-color c6d0f5 --ring-clear-color f4b8e4 --separator-color 00000000 --font "JetBrainsMono Nerd Font"'
+    before-sleep '$lock'
 
 input * {
     xkb_layout us
@@ -115,15 +116,15 @@ bindsym Mod1+Shift+j resize grow height 20 px
 bindsym Mod1+Shift+k resize shrink height 20 px
 bindsym Mod1+Shift+l resize grow width 20 px
 
-set $ws1  "1"
-set $ws2  "2"
-set $ws3  "3"
-set $ws4  "4"
-set $ws5  "5"
-set $ws6  "6"
-set $ws7  "7"
-set $ws8  "8"
-set $ws9  "9"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
 set $ws10 "10"
 
 bindsym $mod+1 workspace number $ws1
