@@ -30,6 +30,7 @@
     cava
     cbonsai
     clang-tools
+    cliphist
     cmatrix
     cointop
     cowsay

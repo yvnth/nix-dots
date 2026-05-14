@@ -51,6 +51,8 @@ exec_always swaybg -i ~/Pictures/walls/nixppuccin.jpg -m fill
 exec_always autotiling
 exec_always sh -c 'pkill waybar; sleep 0.2; waybar'
 exec ~/.config/sway/battery-warning.sh
+exec wl-paste --type text --watch cliphist store
+exec wl-paste --type image --watch cliphist store
 exec_always swayidle -w \
     timeout 300 'swaylock --ignore-empty-password --indicator-thickness 15 --indicator-radius 150 --image ~/Pictures/walls/bsod.png --ring-color f4b8e4 --key-hl-color a6d189 --line-color 00000000 --inside-color 30344688 --inside-clear-color 30344688 --text-color c6d0f5 --text-clear-color c6d0f5 --ring-clear-color f4b8e4 --separator-color 00000000 --font "JetBrainsMono Nerd Font"' \
     timeout 600 'swaymsg "output * dpms off"' \
@@ -75,7 +77,8 @@ input type:touchpad {
 
 bindsym $mod+Return exec $term
 bindsym $mod+space exec $menu -show drun
-bindsym $mod+Ctrl+space exec rofimoji --selector $menu
+bindsym $mod+Ctrl+space exec cliphist list | $menu -dmenu -display-columns 2 | cliphist decode | wl-copy
+bindsym $mod+Mod1+space exec rofimoji --selector "$menu" --action copy
 bindsym $mod+b exec $browser
 bindsym $mod+Shift+Escape exec $lock
 
