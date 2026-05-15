@@ -136,6 +136,7 @@
     vscode
     vscode-langservers-extracted
     waybar
+    waytrogen
     wget
     wl-clipboard
     wl-screenrec
