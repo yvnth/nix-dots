@@ -32,22 +32,22 @@ indent = { tab-width = 4, unit = "    " }
 [[language]]
 name = "html"
 auto-format = true
-indent = { tab-width = 4, unit = "    " }
+indent = { tab-width = 2, unit = "  " }
 
 [[language]]
 name = "javascript"
 auto-format = true
-indent = { tab-width = 4, unit = "    " }
+indent = { tab-width = 2, unit = "  " }
 
 [[language]]
 name = "json"
 auto-format = true
-indent = { tab-width = 4, unit = "    " }
+indent = { tab-width = 2, unit = "  " }
 
 [[language]]
 name = "jsx"
 auto-format = true
-indent = { tab-width = 4, unit = "    " }
+indent = { tab-width = 2, unit = "  " }
 
 [[language]]
 name = "lua"
@@ -57,7 +57,7 @@ indent = { tab-width = 4, unit = "    " }
 [[language]]
 name = "markdown"
 auto-format = true
-indent = { tab-width = 4, unit = "    " }
+indent = { tab-width = 2, unit = "  " }
 
 [[language]]
 name = "meson"
@@ -98,28 +98,28 @@ language-servers = ["rust-analyzer"]
 [[language]]
 name = "toml"
 auto-format = true
-indent = { tab-width = 4, unit = "    " }
+indent = { tab-width = 2, unit = "  " }
 language-servers = ["taplo"]
 
 [[language]]
 name = "tsx"
 auto-format = true
-indent = { tab-width = 4, unit = "    " }
+indent = { tab-width = 2, unit = "  " }
 
 [[language]]
 name = "typescript"
 auto-format = true
-indent = { tab-width = 4, unit = "    " }
+indent = { tab-width = 2, unit = "  " }
 
 [[language]]
 name = "xml"
 auto-format = true
-indent = { tab-width = 4, unit = "    " }
+indent = { tab-width = 2, unit = "  " }
 
 [[language]]
 name = "yaml"
 auto-format = true
-indent = { tab-width = 4, unit = "    " }
+indent = { tab-width = 2, unit = "  " }
 
 [[language]]
 name = "zig"

@@ -47,9 +47,9 @@ display-messages = true
 [keys.normal]
 space.g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
 space.e = [
-    ":sh rm -f /tmp/unique-file-u41ae14",
-    ":insert-output yazi '%{buffer_name}' --chooser-file=/tmp/unique-file-u41ae14",
-    ":insert-output echo \"x1b[?1049h\" > /dev/tty",
-    ":open %sh{cat /tmp/unique-file-u41ae14}",
-    ":redraw",
+  ":sh rm -f /tmp/unique-file-u41ae14",
+  ":insert-output yazi '%{buffer_name}' --chooser-file=/tmp/unique-file-u41ae14",
+  ":insert-output echo \"x1b[?1049h\" > /dev/tty",
+  ":open %sh{cat /tmp/unique-file-u41ae14}",
+  ":redraw",
 ]

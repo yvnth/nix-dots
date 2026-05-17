@@ -11,11 +11,11 @@ video = [{ run = 'mpv "$@"', orphan = true }]
 
 [open]
 rules = [
-    { mime = "image/*", use = "image" },
-    { mime = "application/pdf", use = "pdf" },
-    { mime = "video/*", use = "video" },
-    { mime = "text/*", use = "edit" },
-    { mime = "application/json", use = "edit" },
-    { mime = "application/javascript", use = "edit" },
-    { mime = "*", use = "edit" },
+  { mime = "image/*", use = "image" },
+  { mime = "application/pdf", use = "pdf" },
+  { mime = "video/*", use = "video" },
+  { mime = "text/*", use = "edit" },
+  { mime = "application/json", use = "edit" },
+  { mime = "application/javascript", use = "edit" },
+  { mime = "*", use = "edit" },
 ]
