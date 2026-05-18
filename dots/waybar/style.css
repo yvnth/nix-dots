@@ -43,17 +43,23 @@ window#waybar {
   margin: 0;
 }
 
+#workspaces {
+  background: @bg;
+  margin: 0;
+  padding: 0;
+}
+
 #workspaces button {
   background: @bg;
-  color: @subtext;
-  padding: 4px 10px;
+  color: alpha(@pink, 0.6);
+  padding: 2px 8px;
   margin: 0;
   border-radius: 0;
-  transition: color 0.2s, background 0.2s;
+  transition: all 0.2s ease;
 }
 
 #workspaces button.empty {
-  color: alpha(@subtext, 0.45);
+  color: alpha(@pink, 0.35);
 }
 
 #workspaces button.visible,
@@ -63,115 +69,58 @@ window#waybar {
 }
 
 #workspaces button.active {
-  color: @pink;
-  background: alpha(@pink, 0.18);
-  box-shadow: inset 0 -2px 0 @pink;
+  color: @bg;
+  background: @pink;
 }
 
 #workspaces button:hover {
-  background: @surface0;
+  background: alpha(@pink, 0.18);
   color: @pink;
 }
 
+#window {
+  color: @pink;
+  padding: 2px 8px;
+  margin: 0;
+}
+
 #network,
-#cpu,
 #memory,
 #battery,
 #pulseaudio,
 #backlight,
 #clock,
 #tray,
-#temperature,
 #disk,
 #custom-launcher,
 #custom-power {
   background: @bg;
+  color: @pink;
   border-radius: 0;
-  padding: 4px 10px;
+  padding: 2px 6px;
   margin: 0;
   transition: color 0.2s;
 }
 
-#custom-launcher {
-  color: @pink;
-}
-
-#network {
-  color: @sapphire;
-}
-
 #network.disconnected {
-  color: alpha(@subtext, 0.5);
-}
-
-#cpu {
-  color: @peach;
-}
-
-#memory {
-  color: @mauve;
-}
-
-#backlight {
-  color: @yellow;
-}
-
-#pulseaudio {
-  color: @teal;
+  color: alpha(@pink, 0.4);
 }
 
 #pulseaudio.muted {
-  color: @subtext;
-}
-
-#battery {
-  color: @green;
-}
-
-#battery.charging {
-  color: @sky;
+  color: alpha(@pink, 0.5);
 }
 
 #battery.warning:not(.charging) {
-  color: @yellow;
+  color: @pink;
 }
 
 #battery.critical:not(.charging) {
-  color: @red;
+  color: @pink;
   animation: blink 0.5s steps(12) infinite;
-}
-
-#battery.good {
-  color: @green;
-}
-
-#battery.full {
-  color: @green;
-}
-
-#clock {
-  color: @lavender;
-}
-
-#temperature {
-  color: @flamingo;
-}
-
-#temperature.critical {
-  color: @red;
-  animation: blink 0.5s steps(12) infinite;
-}
-
-#disk {
-  color: @blue;
 }
 
 #tray {
-  color: @rosewater;
-}
-
-#custom-power {
-  color: @red;
+  padding-right: 4px;
 }
 
 #tray>.passive {
@@ -180,11 +129,10 @@ window#waybar {
 
 #tray>.needs-attention {
   -gtk-icon-effect: highlight;
-  color: @peach;
 }
 
 @keyframes blink {
   to {
-    color: @subtext;
+    color: alpha(@pink, 0.4);
   }
 }
