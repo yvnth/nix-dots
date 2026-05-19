@@ -34,6 +34,7 @@ Place your age key so sops-nix can decrypt secrets at build time:
 ```bash
 mkdir -p ~/.config/sops/age
 cp /path/to/your/keys.txt ~/.config/sops/age/keys.txt
+chmod 600 ~/.config/sops/age/keys.txt
 ```
 
 ### 4. Build and Switch
