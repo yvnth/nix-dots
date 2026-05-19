@@ -18,21 +18,24 @@
     "usb_storage"
     "sd_mod"
   ];
+
   boot.initrd.kernelModules = [ ];
+
   boot.kernelModules = [ "kvm-intel" ];
+
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/mapper/luks-0aa99df4-68c0-4449-b61f-d6b8ce2b7586";
+    device = "/dev/mapper/cryptroot";
     fsType = "btrfs";
     options = [ "subvol=@" ];
   };
 
-  boot.initrd.luks.devices."luks-0aa99df4-68c0-4449-b61f-d6b8ce2b7586".device =
+  boot.initrd.luks.devices."cryptroot".device =
     "/dev/disk/by-uuid/0aa99df4-68c0-4449-b61f-d6b8ce2b7586";
 
   fileSystems."/home" = {
-    device = "/dev/mapper/luks-0aa99df4-68c0-4449-b61f-d6b8ce2b7586";
+    device = "/dev/mapper/cryptroot";
     fsType = "btrfs";
     options = [ "subvol=@home" ];
   };
@@ -49,5 +52,6 @@
   swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
