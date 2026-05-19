@@ -21,22 +21,25 @@
       base0F = "eebebe";
     };
     polarity = "dark";
+
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
+        package = pkgs.nerd-fonts.martian-mono;
+        name = "MartianMono Nerd Font";
       };
+
       sansSerif = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
+        package = pkgs.nerd-fonts.martian-mono;
+        name = "MartianMono Nerd Font";
       };
+
       serif = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
+        package = pkgs.nerd-fonts.martian-mono;
+        name = "MartianMono Nerd Font";
       };
+
       sizes = {
         applications = 15;
-        terminal = 15;
         desktop = 15;
         popups = 15;
       };
