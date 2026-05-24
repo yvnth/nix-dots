@@ -24,13 +24,16 @@ jobs:
   update:
     runs-on: ubuntu-latest
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: write
+      pull-requests: write
     env:
       NIX_CONFIG: experimental-features = nix-command flakes
     steps:
       - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v31
       - run: nix flake update
-      - uses: peter-evans/create-pull-request@v6
+      - uses: peter-evans/create-pull-request@v7
         with:
           commit-message: "chore: update flake inputs"
           title: "chore: update flake inputs"
