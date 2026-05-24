@@ -3,39 +3,54 @@ name: Build NixOS Flake
 on:
   push:
     branches:
-      - main
+      - master
+
   pull_request:
+
   workflow_dispatch:
+
   schedule:
     - cron: "0 0 * * 0"
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     env:
       NIX_CONFIG: experimental-features = nix-command flakes
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: cachix/install-nix-action@v31
         with:
           nix_path: nixpkgs=channel:nixos-unstable
+
       - run: nix flake check
 
   update:
     runs-on: ubuntu-latest
+
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+
     permissions:
       contents: write
       pull-requests: write
+
     env:
       NIX_CONFIG: experimental-features = nix-command flakes
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: cachix/install-nix-action@v31
+
       - run: nix flake update
+
       - uses: peter-evans/create-pull-request@v7
         with:
-          commit-message: "chore: update flake inputs"
-          title: "chore: update flake inputs"
+          commit-message: "chore(flake): update inputs"
+          title: "chore(flake): update inputs"
           branch: update-flake-inputs
           delete-branch: true
+          labels: dependencies
