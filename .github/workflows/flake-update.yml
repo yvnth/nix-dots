@@ -1,42 +1,16 @@
-name: Build NixOS Flake
+name: Weekly system update
 
 on:
-  push:
-    branches:
-      - master
-
-  pull_request:
-
-  workflow_dispatch:
-
   schedule:
     - cron: "0 0 * * 0"
+  workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    env:
-      NIX_CONFIG: experimental-features = nix-command flakes
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: cachix/install-nix-action@v31
-        with:
-          nix_path: nixpkgs=channel:nixos-unstable
-
-      - run: nix flake check
-
   update:
     runs-on: ubuntu-latest
-
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-
     permissions:
       contents: write
       pull-requests: write
-
     env:
       NIX_CONFIG: experimental-features = nix-command flakes
 
@@ -49,8 +23,8 @@ jobs:
 
       - uses: peter-evans/create-pull-request@v7
         with:
-          commit-message: "chore(flake): update inputs"
-          title: "chore(flake): update inputs"
-          branch: update-flake-inputs
+          commit-message: "chore(nixos): weekly system update"
+          title: "chore(nixos): weekly system update"
+          branch: weekly-system-update
           delete-branch: true
           labels: dependencies
