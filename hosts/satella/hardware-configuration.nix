@@ -13,16 +13,13 @@
   boot.initrd.availableKernelModules = [
     "xhci_pci"
     "thunderbolt"
+    "vmd"
     "nvme"
-    "usbhid"
     "usb_storage"
     "sd_mod"
   ];
-
   boot.initrd.kernelModules = [ ];
-
   boot.kernelModules = [ "kvm-intel" ];
-
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
@@ -32,7 +29,7 @@
   };
 
   boot.initrd.luks.devices."cryptroot".device =
-    "/dev/disk/by-uuid/0aa99df4-68c0-4449-b61f-d6b8ce2b7586";
+    "/dev/disk/by-uuid/506e62d5-178a-4297-b6fb-28fce445ad4a";
 
   fileSystems."/home" = {
     device = "/dev/mapper/cryptroot";
@@ -41,7 +38,7 @@
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/FE35-930D";
+    device = "/dev/disk/by-uuid/3B50-57A4";
     fsType = "vfat";
     options = [
       "fmask=0077"
