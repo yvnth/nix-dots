@@ -34,8 +34,8 @@ current = { fg = "#303446", bg = "#f4b8e4" }
 preview = { fg = "#303446", bg = "#c6d0f5" }
 
 [status]
-sep_left = { open = "", close = "" }
-sep_right = { open = "", close = "" }
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
 progress_label = { fg = "#f2d5cf", bold = true }
 progress_normal = { fg = "#a6d189", bg = "#51576d" }
 progress_error = { fg = "#e5c890", bg = "#e78284" }

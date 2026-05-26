@@ -1,5 +1,5 @@
 gui:
-  border: single
+  border: rounded
   theme:
     activeBorderColor:
       - "#f4b8e4"
