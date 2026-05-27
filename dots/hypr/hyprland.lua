@@ -83,16 +83,24 @@ hl.config({
         fullscreen_opacity = 1.0,
 
         shadow = {
-            enabled = false,
+            enabled = true,
+            range = 30,
+            render_power = 5,
+            offset = { 0, 5 },
+            color = "rgba(00000070)",
         },
 
         blur = {
-            enabled = false,
+            enabled = true,
+            size = 15,
+            passes = 2,
+            noise = 0.08,
+            contrast = 1.5,
         },
     },
 
     animations = {
-        enabled = false,
+        enabled = true,
     },
 
     dwindle = {
@@ -101,6 +109,10 @@ hl.config({
 
     master = {
         new_status = "master",
+    },
+
+    scrolling = {
+        fullscreen_on_one_column = false,
     },
 
     misc = {
@@ -120,6 +132,16 @@ hl.config({
     },
 })
 
+hl.curve("myBezier", { type = "bezier", points = { { 0.05, 0.9 }, { 0.1, 1.05 } } })
+
+hl.animation({ leaf = "windows", enabled = true, speed = 7, bezier = "myBezier" })
+hl.animation({ leaf = "windowsIn", enabled = false })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 7, bezier = "myBezier", style = "slide" })
+hl.animation({ leaf = "border", enabled = true, speed = 10, bezier = "myBezier" })
+hl.animation({ leaf = "borderangle", enabled = true, speed = 8, bezier = "myBezier" })
+hl.animation({ leaf = "fade", enabled = true, speed = 7, bezier = "myBezier" })
+hl.animation({ leaf = "workspaces", enabled = false })
+
 local mainMod = "SUPER"
 
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
@@ -131,6 +153,9 @@ hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + CTRL + SPACE", hl.dsp.exec_cmd("cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"))
 hl.bind(mainMod .. " + ALT + SPACE", hl.dsp.exec_cmd("rofimoji --selector fuzzel --action copy"))
 hl.bind(mainMod .. " + SHIFT + ESCAPE", hl.dsp.exec_cmd("noctalia-shell ipc call lockScreen lock"))
+hl.bind(mainMod .. " + ALT + S", hl.dsp.exec_cmd("hyprctl eval 'hl.config({ general = { layout = \"scrolling\" } })'"))
+hl.bind(mainMod .. " + ALT + T", hl.dsp.exec_cmd("hyprctl eval 'hl.config({ general = { layout = \"dwindle\" } })'"))
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", toggle = true }))
 
 hl.bind("PRINT",
     hl.dsp.exec_cmd(
