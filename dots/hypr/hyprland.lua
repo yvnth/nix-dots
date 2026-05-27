@@ -76,45 +76,26 @@ hl.config({
     },
 
     decoration = {
-        rounding           = 26,
+        rounding           = 13,
 
-        active_opacity     = 0.965,
-        inactive_opacity   = 0.87,
+        active_opacity     = 1.00,
+        inactive_opacity   = 0.95,
         fullscreen_opacity = 1.0,
 
         dim_inactive       = true,
         dim_strength       = 0.055,
 
         shadow             = {
-            enabled      = true,
-            range        = 60,
-            render_power = 8,
-            color        = "rgba(0,0,0,115)",
-            scale        = 1.0,
+            enabled = false,
         },
 
         blur               = {
-            enabled            = true,
-            size               = 8,
-            passes             = 6,
-            ignore_opacity     = true,
-            new_optimizations  = true,
-
-            vibrancy           = 0.9,
-            vibrancy_darkness  = 0.3,
-
-            noise              = 0.02,
-            contrast           = 1.2,
-            brightness         = 1.1,
-
-            popups             = true,
-            popups_ignorealpha = 0.3,
-            xray               = false,
+            enabled = false,
         },
     },
 
     animations = {
-        enabled = true,
+        enabled = false,
     },
 
     dwindle = {
