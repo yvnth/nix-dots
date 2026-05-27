@@ -42,9 +42,7 @@
     gradle
     grim
     helix
-    jdk21
     jdt-language-server
-    jetbrains.idea-oss
     jq
     jujutsu
     just
@@ -92,7 +90,6 @@
     python314Packages.pip
     python314Packages.uv
     ripgrep
-    rofi
     rofimoji
     ruby
     ruff
