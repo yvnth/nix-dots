@@ -7,6 +7,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v1.0.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };
@@ -34,6 +39,7 @@
   outputs =
     {
       home-manager,
+      lanzaboote,
       nix-flatpak,
       nixpkgs,
       spicetify-nix,
@@ -50,20 +56,18 @@
 
         modules = [
           ./hosts/satella/configuration.nix
+          lanzaboote.nixosModules.lanzaboote
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
           {
             home-manager = {
               backupFileExtension = "bak";
-
               extraSpecialArgs = {
                 inherit inputs;
               };
-
               useGlobalPkgs = true;
               useUserPackages = true;
-
               users.yash2k4 = {
                 imports = [
                   ./hosts/satella/home.nix

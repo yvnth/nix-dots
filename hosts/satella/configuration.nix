@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -14,9 +14,18 @@
   ];
 
   boot.loader = {
-    systemd-boot.enable = true;
+    systemd-boot.enable = lib.mkForce false;
     efi.canTouchEfiVariables = true;
   };
+
+  boot.lanzaboote = {
+    enable = true;
+    pkiBundle = "/var/lib/sbctl";
+    autoGenerateKeys.enable = true;
+    autoEnrollKeys.enable = true;
+  };
+
+  environment.systemPackages = [ pkgs.sbctl ];
 
   hardware.bluetooth = {
     enable = true;
@@ -44,7 +53,6 @@
       enable = true;
       xwayland.enable = true;
     };
-
     zsh.enable = true;
   };
 
