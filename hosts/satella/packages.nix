@@ -15,6 +15,7 @@
 
   environment.systemPackages = with pkgs; [
     age
+    autotiling
     bash-language-server
     bat
     bibata-cursors
@@ -28,11 +29,11 @@
     docker-compose
     dockerfile-language-server
     dotnet-sdk
+    dysk
     eza
     fastfetch
     fd
     firefox
-    fuzzel
     fzf
     gcc
     gimp
@@ -90,6 +91,7 @@
     python314Packages.pip
     python314Packages.uv
     ripgrep
+    rofi
     rofimoji
     ruby
     ruff
