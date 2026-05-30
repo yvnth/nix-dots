@@ -49,12 +49,11 @@
   nixpkgs.config.allowUnfree = true;
 
   programs = {
-    sway = {
+    hyprland = {
       enable = true;
-      extraOptions = [ "--unsupported-gpu" ];
-      package = pkgs.swayfx;
+      xwayland.enable = true;
     };
-    xwayland.enable = true;
+
     zsh.enable = true;
   };
 
@@ -81,10 +80,7 @@
     ];
   };
 
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-  };
+  xdg.portal.enable = true;
 
   zramSwap = {
     enable = true;
