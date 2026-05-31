@@ -1,13 +1,15 @@
 * {
-    background-color:            rgba(48, 52, 70, 0.78);
+    background-color:            #303446;
     border-color:                #f4b8e4;
     text-color:                  #c6d0f5;
-    font:                        "JetBrainsMono Nerd Font 13";
-    prompt-font:                 "JetBrainsMono Nerd Font Bold 13";
-    prompt-background:           rgba(244, 184, 228, 0.92);
+    font:                        "MartianMono Nerd Font 13";
+    prompt-font:                 "MartianMono Nerd Font Bold 13";
+    prompt-background:           #f4b8e4;
     prompt-foreground:           #303446;
     prompt-padding:              4px;
-    selected-normal-background:  rgba(244, 184, 228, 0.92);
+    alternate-normal-background: #292c3c;
+    alternate-normal-foreground: @text-color;
+    selected-normal-background:  #f4b8e4;
     selected-normal-foreground:  #303446;
     spacing:                     3;
 }
@@ -17,108 +19,98 @@ configuration {
 }
 
 #window {
-    background-color: rgba(48, 52, 70, 0.78);
-    border: 2;
+    border:  2;
     padding: 5;
-    border-radius: 16px;
+    border-radius: 0;
 }
 
 #mainbox {
-    background-color: transparent;
-    border: 0;
+    border:  0;
     padding: 0;
-    border-radius: 16px;
+    border-radius: 0;
 }
 
 #message {
-    background-color: transparent;
-    border: 0;
-    padding: 1px;
-    border-radius: 12px;
+    border:   1px dash 0px 0px;
+    padding:  1px;
+    border-radius: 0;
 }
 
 #listview {
-    background-color: transparent;
     fixed-height: 0;
-    border: 0;
-    spacing: 4px;
-    scrollbar: false;
-    padding: 2px 0px 0px;
-    border-radius: 14px;
+    border:       2px solid 0px 0px;
+    border-color: #292c3c;
+    spacing:      2px;
+    scrollbar:    true;
+    padding:      2px 0px 0px;
+    border-radius: 0;
 }
 
 #element {
-    background-color: transparent;
-    text-color: @text-color;
-    border: 0;
+    border:  0;
     padding: 3px;
-    border-radius: 12px;
+    border-radius: 0;
 }
 
 #element.selected.normal {
     background-color: @selected-normal-background;
-    text-color: @selected-normal-foreground;
-    border-radius: 12px;
+    text-color:       @selected-normal-foreground;
+    border-radius: 0;
 }
 
-#element.normal.normal {
-    background-color: transparent;
-    text-color: @text-color;
-    border-radius: 12px;
+#element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+    border-radius: 0;
 }
 
 #scrollbar {
-    background-color: transparent;
-    width: 0px;
-    border: 0;
+    width:        0px;
+    border:       0;
     handle-width: 0px;
-    padding: 0;
-    border-radius: 12px;
+    padding:      0;
+    border-radius: 0;
 }
 
 #sidebar {
-    background-color: transparent;
-    border: 0;
-    border-radius: 14px;
+    border: 2px dash 0px 0px;
+    border-radius: 0;
 }
 
 #button.selected {
     background-color: @selected-normal-background;
-    text-color: @selected-normal-foreground;
-    border-radius: 12px;
+    text-color:       @selected-normal-foreground;
+    border-radius: 0;
 }
 
 #inputbar {
-    background-color: transparent;
     spacing: 0;
     padding: 1px;
-    border-radius: 14px;
+    border-radius: 0;
 }
 
 #case-indicator {
-    background-color: transparent;
     spacing: 0;
-    border-radius: 12px;
+    border-radius: 0;
 }
 
 #entry {
-    background-color: transparent;
     padding: 4px 4px;
-    expand: false;
-    width: 10em;
-    border-radius: 12px;
+    expand:  false;
+    width:   10em;
+    border-radius: 0;
 }
 
 #prompt {
-    padding: @prompt-padding;
+    padding:          @prompt-padding;
     background-color: @prompt-background;
-    text-color: @prompt-foreground;
-    font: @prompt-font;
-    border-radius: 12px;
+    text-color:       @prompt-foreground;
+    font:             @prompt-font;
+    border-radius:    0;
 }
 
 element-text {
     background-color: inherit;
-    text-color: inherit;
-    border-radius: 12px;
+    text-color:       inherit;
+    border-radius: 0;
 }

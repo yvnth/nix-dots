@@ -1,6 +1,6 @@
 configuration {
     modi: "window,drun,ssh,combi";
-    font: "JetbrainsMono Nerd Font 10";
+    font: "MartianMono Nerd Font 10";
     combi-modi: "window,drun,ssh";
     show-icons: true;
     icon-theme: "Papirus";

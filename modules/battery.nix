@@ -33,6 +33,5 @@
     };
 
     power-profiles-daemon.enable = false;
-    upower.enable = true;
   };
 }

@@ -1,0 +1,96 @@
+{
+  "layer": "top",
+  "position": "top",
+  "exclusive": true,
+  "modules-left": [
+    "sway/workspaces"
+  ],
+  "modules-right": [
+    "network",
+    "memory",
+    "backlight",
+    "pulseaudio",
+    "battery",
+    "clock#time",
+    "custom/notifications",
+    "tray"
+  ],
+  "sway/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十"
+    }
+  },
+  "network": {
+    "interval": 5,
+    "format-wifi": " {essid}",
+    "format-ethernet": " {ipaddr}",
+    "format-disconnected": ""
+  },
+  "memory": {
+    "interval": 2,
+    "format": " {percentage:2}%"
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "󰃠 {percent}%"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "battery": {
+    "interval": 3,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰂄 {capacity}%",
+    "format-full": "󰁹 {capacity}%",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
+    "tooltip-format": "{capacity}%"
+  },
+  "clock#time": {
+    "interval": 1,
+    "format": "{:%H:%M:%S}",
+    "tooltip": false
+  },
+  "custom/notifications": {
+    "format": "󰂚",
+    "on-click": "swaync-client -t"
+  },
+  "tray": {
+    "spacing": 4
+  }
+}
