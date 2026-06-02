@@ -66,6 +66,7 @@ bindsym $mod+space exec $menu -show drun
 bindsym $mod+Ctrl+space exec cliphist list | $menu -dmenu -display-columns 2 | cliphist decode | wl-copy
 bindsym $mod+Mod1+space exec rofimoji --selector "$menu" --action copy
 bindsym $mod+b exec $browser
+bindsym $mod+p exec rofi-pass
 bindsym $mod+Shift+Escape exec swaylock -f
 
 bindsym Print exec sh -c 'grim -t ppm -g "$(slurp)" - | satty --filename - --fullscreen --copy-command wl-copy --output-filename ~/Pictures/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png'

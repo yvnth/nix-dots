@@ -99,6 +99,7 @@
     ripgrep
     rofi
     rofimoji
+    rofi-pass-wayland
     ruby
     ruff
     rust-analyzer
