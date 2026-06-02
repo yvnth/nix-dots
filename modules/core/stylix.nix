@@ -26,18 +26,18 @@
 
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.martian-mono;
-        name = "MartianMono Nerd Font";
+        package = pkgs.ioskeley-mono.normal-NF;
+        name = "IoskeleyMono Nerd Font";
       };
 
       sansSerif = {
-        package = pkgs.nerd-fonts.martian-mono;
-        name = "MartianMono Nerd Font";
+        package = pkgs.ioskeley-mono.normal-NF;
+        name = "IoskeleyMono Nerd Font";
       };
 
       serif = {
-        package = pkgs.nerd-fonts.martian-mono;
-        name = "MartianMono Nerd Font";
+        package = pkgs.ioskeley-mono.normal-NF;
+        name = "IoskeleyMono Nerd Font";
       };
 
       sizes = {
