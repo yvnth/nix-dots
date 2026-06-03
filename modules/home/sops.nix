@@ -6,13 +6,16 @@
 {
   sops = {
     age.keyFile = "/home/yvnth/.config/sops/age/keys.txt";
-    defaultSopsFile = ../../secrets/secrets.yaml;
 
-    secrets."ssh_keys/satella/yvnth" = {
+    secrets.ssh_private_key = {
+      sopsFile = ../../secrets/satella/yvnth/ssh.yaml;
+      key = "private_key";
       path = "${config.home.homeDirectory}/.ssh/id_ed25519";
     };
 
-    secrets."gpg/yvnth" = {
+    secrets.gpg_private_key = {
+      sopsFile = ../../secrets/common/gpg.yaml;
+      key = "private_key";
       path = "${config.home.homeDirectory}/.gnupg/secret-key.asc";
     };
   };
