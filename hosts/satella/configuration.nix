@@ -44,9 +44,9 @@
   programs = {
     sway = {
       enable = true;
+      xwayland.enable = true;
       extraOptions = [ "--unsupported-gpu" ];
     };
-    xwayland.enable = true;
     zsh.enable = true;
   };
 
