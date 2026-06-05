@@ -23,6 +23,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -42,6 +47,7 @@
       lanzaboote,
       nix-flatpak,
       nixpkgs,
+      nur,
       spicetify-nix,
       stylix,
       ...
@@ -60,6 +66,7 @@
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
+          nur.modules.nixos.default
           {
             home-manager = {
               backupFileExtension = "bak";
