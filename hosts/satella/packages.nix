@@ -14,9 +14,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    acpi
     age
-    autotiling
     bash-language-server
     bat
     bibata-cursors
@@ -37,7 +35,6 @@
     fastfetch
     fd
     firefox
-    foot
     fzf
     gcc
     gimp
@@ -54,6 +51,7 @@
     k9s
     kdePackages.kate
     kdePackages.qtdeclarative
+    kitty
     kotlin
     kubectl
     kubernetes
@@ -81,6 +79,7 @@
     nix-output-monitor
     nixd
     nixfmt
+    noctalia-shell
     nodejs
     nsxiv
     nwg-look
@@ -111,10 +110,7 @@
     slurp
     sops
     starship
-    swaybg
     swayidle
-    swaylock
-    swaynotificationcenter
     taplo
     tealdeer
     tmux
@@ -125,8 +121,6 @@
     unzip
     vscode
     vscode-langservers-extracted
-    waybar
-    waytrogen
     wget
     wl-clipboard
     wl-screenrec

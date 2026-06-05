@@ -42,11 +42,8 @@
   nixpkgs.config.allowUnfree = true;
 
   programs = {
-    sway = {
-      enable = true;
-      xwayland.enable = true;
-      extraOptions = [ "--unsupported-gpu" ];
-    };
+    mangowc.enable = true;
+    xwayland.enable = true;
     zsh.enable = true;
   };
 
