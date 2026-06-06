@@ -42,7 +42,7 @@
   nixpkgs.config.allowUnfree = true;
 
   programs = {
-    mangowc.enable = true;
+    mango.enable = true;
     xwayland.enable = true;
     zsh.enable = true;
   };

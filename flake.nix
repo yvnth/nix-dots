@@ -12,6 +12,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    mangowm = {
+      url = "github:mangowm/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };
@@ -45,6 +50,7 @@
     {
       home-manager,
       lanzaboote,
+      mangowm,
       nix-flatpak,
       nixpkgs,
       nur,
@@ -63,18 +69,23 @@
         modules = [
           ./hosts/satella/configuration.nix
           lanzaboote.nixosModules.lanzaboote
+          mangowm.nixosModules.mango
           nix-flatpak.nixosModules.nix-flatpak
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
           nur.modules.nixos.default
+
           {
             home-manager = {
               backupFileExtension = "bak";
+
               extraSpecialArgs = {
                 inherit inputs;
               };
+
               useGlobalPkgs = true;
               useUserPackages = true;
+
               users.yvnth = {
                 imports = [
                   ./hosts/satella/home.nix
