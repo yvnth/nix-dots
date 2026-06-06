@@ -32,6 +32,6 @@ notify-send \
   -u low \
   -t 3000 \
   -h string:x-canonical-private-synchronous:mango-layout \
-  -i "$HOME/.config/mango/assets/nixgo.png" \
+  -i "$HOME/.config/mango/assets/nixgo.svg" \
   " Layout Changed" \
   "$selected"
