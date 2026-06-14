@@ -34,7 +34,7 @@
     eza
     fastfetch
     fd
-    firefox
+    firefox-devedition
     fzf
     gcc
     gimp
