@@ -21,7 +21,7 @@
     brightnessctl
     cargo-seek
     cliphist
-    direnv
+    devenv
     docker-buildx
     docker-compose
     dysk
