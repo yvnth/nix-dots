@@ -4,6 +4,6 @@
 
   config = lib.mkIf config.homeModules.mango.enable {
     home.file.".config/mango".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-dots/modules/home/mango/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/mango/config";
   };
 }

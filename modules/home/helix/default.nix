@@ -39,6 +39,6 @@
     ];
 
     home.file.".config/helix".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-dots/modules/home/helix/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/helix/config";
   };
 }

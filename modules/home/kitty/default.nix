@@ -8,6 +8,6 @@
     ];
 
     home.file.".config/kitty".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-dots/modules/home/kitty/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/kitty/config";
   };
 }

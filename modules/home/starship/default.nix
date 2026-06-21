@@ -8,6 +8,6 @@
     ];
 
     home.file.".config/starship".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-dots/modules/home/starship/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/starship/config";
   };
 }

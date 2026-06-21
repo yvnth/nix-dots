@@ -8,6 +8,6 @@
     ];
 
     home.file.".config/yazi".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-dots/modules/home/yazi/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/yazi/config";
   };
 }

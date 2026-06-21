@@ -8,6 +8,6 @@
     ];
 
     home.file.".config/zathura".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-dots/modules/home/zathura/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/zathura/config";
   };
 }

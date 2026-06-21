@@ -8,6 +8,6 @@
     ];
 
     home.file.".config/lazydocker".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-dots/modules/home/lazydocker/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/lazydocker/config";
   };
 }

@@ -8,6 +8,6 @@
     ];
 
     home.file.".config/btop".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-dots/modules/home/btop/config";
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/btop/config";
   };
 }

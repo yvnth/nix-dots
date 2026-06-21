@@ -13,10 +13,10 @@ sudo nixos-rebuild switch
 Clone the repo and replace the placeholder hardware config with the one NixOS
 generated for your machine during installation:
 ```bash
-git clone https://github.com/yvnth/nix-dots.git ~/nix-dots
-rm ~/nix-dots/hosts/satella/hardware-configuration.nix
-sudo cp /etc/nixos/hardware-configuration.nix ~/nix-dots/hosts/satella/hardware-configuration.nix
-sudo chown -R yvnth:users ~/nix-dots
+git clone https://github.com/yvnth/dotfiles.git ~/dotfiles
+rm ~/dotfiles/hosts/satella/hardware-configuration.nix
+sudo cp /etc/nixos/hardware-configuration.nix ~/dotfiles/hosts/satella/hardware-configuration.nix
+sudo chown -R yvnth:users ~/dotfiles
 ```
 ### 3. Copy Age Key
 Place your age key so sops-nix can decrypt secrets at build time:
@@ -34,7 +34,7 @@ sudo find /var/lib/sbctl/keys -name "*.key" -exec chmod 600 {} \;
 ```
 ### 5. Build and Switch
 ```bash
-sudo nixos-rebuild switch --flake ~/nix-dots#satella
+sudo nixos-rebuild switch --flake ~/dotfiles#satella
 reboot
 ```
 > After reboot, Lanzaboote will automatically enroll your keys into the firmware.
