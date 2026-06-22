@@ -58,6 +58,8 @@
     zsh.enable = true;
   };
 
+  security.pam.services.swaylock = { };
+
   services.displayManager.ly = {
     enable = true;
     settings = {

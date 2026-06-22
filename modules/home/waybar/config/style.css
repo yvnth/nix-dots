@@ -1,0 +1,125 @@
+@define-color pink #f4b8e4;
+@define-color text #c6d0f5;
+@define-color bg #303446;
+
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  min-height: 0;
+}
+
+window#waybar {
+  background: @bg;
+  color: @text;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background: @bg;
+  padding: 0;
+  margin: 0;
+}
+
+#tags {
+  background: @bg;
+  margin: 0;
+  padding: 0;
+}
+
+#tags button {
+  background: @bg;
+  color: alpha(@pink, 0.6);
+  padding: 2px 8px;
+  margin: 0;
+  border-radius: 0;
+  transition: all 0.2s ease;
+}
+
+#tags button.empty {
+  color: alpha(@pink, 0.35);
+}
+
+#tags button.occupied,
+#tags button.visible {
+  color: @pink;
+  background: alpha(@pink, 0.10);
+}
+
+#tags button.active,
+#tags button.selected,
+#tags button.focused,
+#tags button.current {
+  color: @bg;
+  background: @pink;
+}
+
+#tags button:hover {
+  background: alpha(@pink, 0.18);
+  color: @pink;
+}
+
+#network,
+#memory,
+#cpu,
+#battery,
+#pulseaudio,
+#backlight,
+#clock,
+#tray,
+#disk,
+#custom-launcher,
+#custom-power,
+#custom-notifications,
+#custom-layout {
+  background: @bg;
+  color: @pink;
+  border-radius: 0;
+  padding: 2px 6px;
+  margin: 0;
+  transition: color 0.2s;
+}
+
+#custom-layout {
+  padding-left: 8px;
+}
+
+#network.disconnected {
+  color: alpha(@pink, 0.4);
+}
+
+#pulseaudio.muted {
+  color: alpha(@pink, 0.5);
+}
+
+#battery.warning:not(.charging) {
+  color: @pink;
+}
+
+#battery.critical:not(.charging) {
+  color: @pink;
+  animation: blink 0.5s steps(12) infinite;
+}
+
+#tray {
+  padding-right: 4px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+@keyframes blink {
+  to {
+    color: alpha(@pink, 0.4);
+  }
+}

@@ -14,6 +14,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    acpi
     age
     bat
     bibata-cursors
@@ -74,19 +75,21 @@
     python314Packages.pip
     python314Packages.uv
     ripgrep
-    rofimoji
     rofi-pass-wayland
+    rofimoji
     ruby
     rustup
     satty
     slurp
     sops
+    swaybg
     swayidle
     tealdeer
     typescript
     typst
     unzip
     vscode
+    waytrogen
     wget
     wl-clipboard
     wl-screenrec

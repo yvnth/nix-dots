@@ -17,11 +17,13 @@
     lazydocker.enable = true;
     lazygit.enable = true;
     mango.enable = true;
-    noctalia.enable = true;
     rofi.enable = true;
     shell.enable = true;
     starship.enable = true;
+    swaylock.enable = true;
+    swaync.enable = true;
     tmux.enable = true;
+    waybar.enable = true;
     yazi.enable = true;
     zathura.enable = true;
   };

@@ -10,15 +10,17 @@
     ./lazygit
     ./mango
     ./nix-search
-    ./noctalia
     ./rofi
     ./scripts
     ./shell
     ./sops
     ./spicetify
     ./starship
+    ./swaylock
+    ./swaync
     ./tmux
     ./vesktop
+    ./waybar
     ./yazi
     ./zathura
   ];

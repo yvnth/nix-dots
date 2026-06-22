@@ -18,12 +18,42 @@ layouts=(
   vertical_tile
 )
 
+declare -A layout_map=(
+  [CT]="center_tile"
+  [K]="deck"
+  [DW]="dwindle"
+  [F]="fair"
+  [G]="grid"
+  [M]="monocle"
+  [RT]="right_tile"
+  [S]="scroller"
+  [T]="tile"
+  [VK]="vertical_deck"
+  [VF]="vertical_fair"
+  [VG]="vertical_grid"
+  [VS]="vertical_scroller"
+  [VT]="vertical_tile"
+)
+
+current_code="$(
+  mmsg get all-tags |
+  jq -r '.all_tags[].tags[] | select(.is_active) | .layout'
+)"
+
+current="${layout_map[$current_code]:-}"
+
 selected="$(
   printf '%s\n' "${layouts[@]}" |
-  rofi -dmenu -i -p "Layout:"
+  awk -v current="$current" '
+    $0 == current { print "✓ " $0; next }
+    { print }
+  ' |
+  rofi -dmenu -i -p "Layout ($current):"
 )"
 
 [[ -z "$selected" ]] && exit 0
+
+selected="${selected#✓ }"
 
 mmsg dispatch setlayout,"$selected"
 
