@@ -26,7 +26,7 @@
 }
 
 * {
-  font-family: "IoskeleyMono Nerd Font";
+  font-family: "JetBrainsMono Nerd Font";
   font-size: 18px;
   font-weight: 600;
   color: @text;
