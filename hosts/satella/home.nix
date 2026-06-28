@@ -13,7 +13,6 @@
     git.enable = true;
     helix.enable = true;
     java.enable = true;
-    kitty.enable = true;
     lazydocker.enable = true;
     lazygit.enable = true;
     mango.enable = true;
@@ -28,6 +27,7 @@
     tmux.enable = true;
     vesktop.enable = true;
     waybar.enable = true;
+    wezterm.enable = true;
     yazi.enable = true;
     zathura.enable = true;
   };

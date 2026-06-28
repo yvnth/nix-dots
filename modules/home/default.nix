@@ -5,7 +5,6 @@
     ./git
     ./helix
     ./java
-    ./kitty
     ./lazydocker
     ./lazygit
     ./mango
@@ -21,6 +20,7 @@
     ./tmux
     ./vesktop
     ./waybar
+    ./wezterm
     ./yazi
     ./zathura
   ];
