@@ -6,7 +6,7 @@ _default:
 rebuild host=hostname:
     nh os switch . -H {{ host }}
 
-upgrade host=hostname:
+update host=hostname:
     nix flake update
     nh os switch . -H {{ host }}
 
