@@ -82,6 +82,22 @@
           fast-nix-gc.nixosModules.default
 
           {
+            nixpkgs.overlays = [
+              (final: prev: {
+                xdg-desktop-portal-wlr = prev.xdg-desktop-portal-wlr.overrideAttrs (old: rec {
+                  version = "0.8.2";
+                  src = prev.fetchFromGitHub {
+                    owner = "emersion";
+                    repo = "xdg-desktop-portal-wlr";
+                    rev = "v${version}";
+                    hash = "sha256-HITf/hgiASWvn/z49mzS8IS1vuyXwdk1JiAOOHRSQMo=";
+                  };
+                });
+              })
+            ];
+          }
+
+          {
             home-manager = {
               backupFileExtension = "bak";
 
